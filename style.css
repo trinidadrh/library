@@ -24,15 +24,17 @@ h1 {
     display: flex;
     justify-content: flex-end;
     margin-top: 10px;
+    margin-left: 5px;
 }
 
 label {
     margin: 1px 1px 1px 1px;
 }
 
-input {
+input, select {
     margin: 1px 10px 1px 1px;
 }
+
 #container {
     display: grid;
     grid-template-columns: auto auto auto auto;
@@ -40,6 +42,7 @@ input {
     padding: 10px;
     border-style: solid;
 }
+
 .card {
     display: flex;
     flex-direction: column;
@@ -55,10 +58,14 @@ img {
 }
 
 img:hover {
-    width: 18px;
-    height: 18px;
+    width: 17px;
+    height: 17px;
 }
 
 .button:hover {
     background-color: rgb(231, 203, 241);
+}
+
+#footer {
+    text-align: center;
 }
