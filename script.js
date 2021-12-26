@@ -9,18 +9,23 @@ let oneHundredYears = new book("One Hundred Years of Solitude", "Gabriel Garcia 
 let theOdyssey = new book("The Odyssey", "Homer", "288", "have read");
 
 // Adds new book object and card to library when Submit button is clicked
-const addBookWithForm = (e)=>{
-    e.preventDefault();
+const addBookWithForm = (e) => {
     let field1 = document.getElementById("form-title").value;
     let field2 =  document.getElementById("form-author").value;
     let field3 = document.getElementById("form-pages").value;
     let field4 = document.getElementById("form-read").value;
-    new book(field1, field2, field3, field4);    
-    document.forms[0].reset();
-    container.innerHTML = "";
-    createCatalogCards();
-    removeBookFromLibrary();
-    haveRead();
+
+    if (field1 && field2 && field3 && field4) {
+        e.preventDefault();
+        new book(field1, field2, field3, field4);    
+        document.forms[0].reset();
+        container.innerHTML = "";
+        createCatalogCards();
+        removeBookFromLibrary();
+        haveRead();
+    } else {
+        e.preventDefault();
+    }
 }
     
 document.addEventListener("DOMContentLoaded", ()=>{
@@ -108,6 +113,8 @@ function haveRead() {
         })
     }
 }
+
+
 
 createCatalogCards();
 removeBookFromLibrary();

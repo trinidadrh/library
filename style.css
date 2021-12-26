@@ -35,6 +35,19 @@ input, select {
     margin: 1px 10px 1px 1px;
 }
 
+/* input:invalid {
+    border: 2px dashed red;
+}
+
+input:valid {
+    border: 2px solid black;
+}  */
+
+input:invalid:required {
+    border: 2px dashed red;
+    background-color: pink;
+}
+
 #container {
     display: grid;
     grid-template-columns: auto auto auto auto;
